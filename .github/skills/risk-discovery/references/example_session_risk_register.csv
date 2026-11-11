@@ -1,0 +1,20 @@
+Risk ID,Category,Risk Title,Description,Causes (Drivers),Effects (Consequences),Likelihood Scale (1-5),Likelihood,Impact Scale (1-5),Impact,Risk Score,Risk Criticality,Preventive Controls,Reductive Controls
+R1,Operational,Loss of the sole cold-chain warehouse to equipment failure,Failure of refrigeration equipment at the only cold-chain warehouse halts chilled and frozen deliveries.,"* Ageing refrigeration units past their service life.
+* No second site for chilled stock.","* Spoiled stock worth several days of sales.
+* Cancelled orders and refunds.
+* Loss of customer trust in fresh products.",3,Possible,5,Severe,15,HIGH,"* Replace the oldest units on a fixed schedule.
+* Add preventive maintenance contracts with 24 hour call out.","* Agree an emergency overflow arrangement with a third party cold store.
+* Keep stock insurance in force."
+R2,Operational,Payment gateway outage during the year end peak,Outage of the single payment gateway during the year end peak stops customers from completing checkout.,"* Single payment provider with no failover.
+* Traffic spikes during year end promotions.","* Lost sales during the outage.
+* Abandoned baskets that do not return.
+* Customer complaints on social media.",3,Possible,4,High,12,HIGH,"* Load test the checkout before each peak season.","* Contract a secondary payment provider with automatic failover."
+R3,Operational,Delivery driver shortage during peak periods,Too few delivery drivers during peak periods leads to late or cancelled deliveries.,"* Gig drivers choose competing platforms during peaks.
+* High driver turnover.","* Late deliveries and missed delivery slots.
+* Lower repeat purchase rates.",4,Likely,3,Moderate,12,HIGH,"* Offer peak season incentives to drivers.","* Cap delivery slots when driver numbers run low."
+R4,Strategic,Loss of loyal customers to a larger rival's discount led subscription,A larger rival's discount led subscription draws away the retailer's most loyal customers.,"* Rival has deeper funding for sustained discounts.
+* Own loyalty programme is basic.","* Falling repeat order rate.
+* Pressure to cut prices and margins.",2,Unlikely,4,High,8,MODERATE,"* Review and strengthen the loyalty programme.",
+R5,Financial,Supplier price rises squeezing margins faster than prices can be raised,Supplier price rises reduce margins when the retailer cannot pass the full increase on to customers.,"* Imported produce prices tied to currency movements.
+* Contracts reviewed only once a year.","* Lower gross margin.
+* Reduced cash available for growth.",4,Likely,2,Low,8,MODERATE,,
