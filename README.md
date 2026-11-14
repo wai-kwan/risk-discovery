@@ -64,7 +64,7 @@ Risk Discovery works on its own and is designed to work with two companion skill
 
 | Skill | What it adds |
 |---|---|
-| [erm](https://github.com/wai-kwan/enterprise-risk-management) | Completes a partial register by adding causes, effects, likelihood and impact ratings, and preventive and reductive controls |
+| [erm](https://github.com/wai-kwan/enterprise-risk-management) | Completes a partial register by adding causes, effects, likelihood and impact ratings, and preventive and reductive controls. The mid session hand-off uses its Completion Mode (erm 1.2.0 or later) |
 | [kri](https://github.com/wai-kwan/key-risk-indicator) | Builds key risk indicators with Green, Amber and Red thresholds from the register |
 
 ```mermaid
@@ -120,7 +120,7 @@ If you do not give a context and objective, the skill asks for them before looki
 ## Pausing, extending, handing off and resuming
 - **Time up.** When the planned time is used and the session is not finished, the skill asks once whether to continue for up to 15 more minutes (focused on ranking and wrapping up) or to end and continue later.
 - **Pause.** Say "pause" or "stop" at any time. Progress is saved with Status Paused, and the summary records the phase reached and the specific next step.
-- **Hand off to erm.** Ask for the erm skill to complete the register. The skill first saves the participant's own register, then saves erm's completed version as a separate `_erm_` file and marks every AI proposed value.
+- **Hand off to erm.** Ask for the erm skill (1.2.0 or later) to complete the register. The skill first saves the participant's own register, then saves erm's completed version as a separate `_erm_` file and marks every AI proposed value, including any cause or effect erm added to the participant's own.
 - **Resume.** Start a new session with the saved register and summary. The skill recaps, skips the completed phases, and saves the new part as `<session-id>_part2_...` without overwriting earlier files.
 
 ## Group sessions
