@@ -27,11 +27,11 @@ Include every risk sharpened into a full statement so far (possibly more than 5,
 
 ## Handing over to the erm skill
 Triggered when the participant asks for the erm skill (https://github.com/wai-kwan/enterprise-risk-management) to complete the register before the session is finished, for example "use erm to finish this".
-1. **Confirm in one sentence** what will happen: erm fills the fields still open (causes, effects, ratings, controls) as AI proposals, and the participant's own content is kept as given. Do not try to talk them out of it.
+1. **Confirm in one sentence** what will happen: erm fills the fields still open (causes, effects, ratings, controls) as AI proposals, and where the participant named only one cause or effect it adds one more after theirs, with a matching control. The participant's own words are kept as given. Do not try to talk them out of it.
 2. **Save the participant's own register first** as `<session-id>_risk_register.csv`. Include every candidate risk the participant has agreed, even if not yet sharpened: a title and one sentence description drafted from their words, and only the causes, effects and controls they actually named. Order the rows by their ranking if one was given, otherwise in the order agreed. Leave the rating columns empty unless the participant rated every risk.
-3. **Check that erm is available** among the session's skills or in the usual skill folders. If it is not, say so, give its link, and finish as a normal paused session.
-4. **Invoke erm** on that register to complete the open fields. erm saves `risk_register.csv`, so run it in a scratch directory or direct its output there, and save the result as `<session-id>_erm_risk_register.csv`. Never overwrite the participant's register, and delete any scratch files afterwards.
-5. **Write the summary** with Status Paused and Reason for ending "Handed over to erm". In the Top Risks table, mark every value erm proposed (for example with an asterisk and a note), say whether the order is the participant's ranking or erm's scores, and set Rated to "erm proposed" in the Consolidation Data. Name both registers in the summary.
+3. **Check that erm 1.2.0 or later is available** among the session's skills or in the usual skill folders (its `SKILL.md` has a "Completion Mode" section). If it is not, say so, give its link, and finish as a normal paused session.
+4. **Invoke erm's Completion Mode** on that register to complete the open fields, and tell erm to save its output as `<session-id>_erm_risk_register.csv` next to the participant's register. Never overwrite the participant's register.
+5. **Write the summary** with Status Paused and Reason for ending "Handed over to erm". Use erm's report of what it generated and added. In the Top Risks table, mark every value erm proposed (for example with an asterisk and a note), note any causes or effects erm added to the participant's own, say whether the order is the participant's ranking or erm's scores, and set Rated to "erm proposed" in the Consolidation Data. Name both registers in the summary.
 6. **Next step** in the resume point: resume at Phase 3 using the erm register as a draft, so the participant confirms or edits each risk, then ranks and rates in Phase 4. Participant ratings replace erm's.
 
 ## Resuming
@@ -49,5 +49,5 @@ A continued session keeps the Session ID of part 1 and names its files `<session
 ## Checks for paused, extended and resumed sessions
 - If the planned time ran out before completion, the user was asked once whether to extend by 15 minutes or end, and the choice is recorded as the Time-up decision.
 - Paused session: the summary records the status, reason, phase reached, phases completed, time used and a specific next step, and a register exists only if at least one risk was sharpened.
-- Handed over to erm: the participant's own register was saved first and left untouched, the erm result is a separate `_erm_` file, every erm proposed value is marked in the summary, and no scratch files remain.
+- Handed over to erm: the participant's own register was saved first and left untouched, the erm result is a separate `_erm_` file, and every erm proposed value, including any cause or effect erm added, is marked in the summary.
 - Resumed session: earlier files were left untouched, the new files carry the part suffix, the register is cumulative, completed phases were not repeated, and the Session History has a new row.
