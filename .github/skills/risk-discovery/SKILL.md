@@ -2,12 +2,12 @@
 name: risk-discovery
 description: Facilitates a time-boxed risk discovery interview or workshop for one person or a group treated as a single voice, up to 60 minutes (default 30), to draw out the top 3 to 5 risks of a company, project or scenario, rank them by perceived criticality and, when time allows, rate likelihood and impact on 1 to 5 scales. Produces an erm format risk register and a markdown session summary that can be consolidated across sessions. Sessions can be paused and resumed from the saved files. Works with two companion skills, erm (https://github.com/wai-kwan/enterprise-risk-management) which completes and rates the register, including a hand-off mid session, and kri (https://github.com/wai-kwan/key-risk-indicator) which builds key risk indicators from it. Use whenever the user wants to run, facilitate or practise a risk workshop, risk interview or risk identification session, discover risks, brainstorm risks, ask "what are our top risks", or build a risk register from a conversation.
 license: Apache-2.0
-compatibility: Any agentskills.io compatible workspace. Output follows the risk_register.csv format of the erm skill but does not require it. Works best with the companion skills erm (https://github.com/wai-kwan/enterprise-risk-management) and kri (https://github.com/wai-kwan/key-risk-indicator).
+compatibility: Any agentskills.io compatible workspace. Output follows the risk_register.csv format of the erm skill but does not require it. Works best with the companion skills erm (https://github.com/wai-kwan/enterprise-risk-management), whose Completion Mode (erm 1.2.0 or later) is used for the mid session hand-off, and kri (https://github.com/wai-kwan/key-risk-indicator).
 metadata:
   tags: "enterprise-risk-management, erm, risk-discovery, risk-workshop, risk-interview, risk-identification, facilitation, risk-register, ai-agents, skills"
   written_by: wai-kwan
   github: "https://github.com/wai-kwan"
-  version: "1.0.0"
+  version: "1.0.1"
   domain: Enterprise Risk Management, Risk Identification, Workshop Facilitation, AI Agents Skill
   standard: Enterprise Risk Management Workflow Specification
 ---
